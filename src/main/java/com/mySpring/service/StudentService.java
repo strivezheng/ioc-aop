@@ -9,7 +9,7 @@ import com.mySpring.autowired.MyBean;
  * Created by seven on 2018/5/12.
  */
 @MyBean("studentService")
-@PointCut("com.mySpring.aspect.BeforeAspect")
+@PointCut("com.mySpring.aop.aspect.BeforeAspect")
 public class StudentService {
 
     // TODO: 2021/1/8  循环依赖

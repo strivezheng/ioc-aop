@@ -9,7 +9,7 @@ import com.mySpring.autowired.MyBean;
  * Created by seven on 2018/5/12.
  */
 @MyBean("teacherService")
-@PointCut("com.mySpring.aspect.SurroundAspect")
+@PointCut("com.mySpring.aop.aspect.SurroundAspect")
 public class TeacherService {
     @MyAutowired
     private StudentService studentService;

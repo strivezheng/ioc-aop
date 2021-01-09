@@ -1,4 +1,4 @@
-package com.mySpring.aspect;
+package com.mySpring.aop.aspect;
 
 import com.mySpring.aop.advice.BeforeAdvice;
 

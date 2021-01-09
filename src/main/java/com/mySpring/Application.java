@@ -14,8 +14,10 @@ import java.io.File;
  */
 public class Application {
     public static void main(String[] args) throws ClassNotFoundException {
+        //初始化环境
         init();
 
+        //模拟spring启动
         Class.forName("com.mySpring.autowired.BeanFactory");
 
         ClassesService classesService = (ClassesService) BeanFactory.getBean("classesService");
@@ -23,17 +25,13 @@ public class Application {
         StudentService studentService = (StudentService) BeanFactory.getBean("studentService");
 
         classesService.showClasses();
+        System.out.println();
+
         teacherService.show();
+        System.out.println();
+
         studentService.show();
-//        student.showName();
-//        classes.test();
-//        student.show();
 
-
-        /*Field[] fields=classes.getClass().getDeclaredFields();
-        for(Field field:fields) {
-            System.out.println(field.getName());
-        }*/
     }
 
     private static void init() {

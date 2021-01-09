@@ -11,7 +11,7 @@ import com.mySpring.autowired.MyBean;
  * 班级类
  */
 @MyBean("classesService")
-@PointCut("com.mySpring.aspect.AfterAspect")
+@PointCut("com.mySpring.aop.aspect.AfterAspect")
 public class ClassesService {
 
     @MyAutowired
