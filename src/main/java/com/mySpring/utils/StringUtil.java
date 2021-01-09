@@ -3,7 +3,8 @@ package com.mySpring.utils;
 import java.net.URL;
 
 /**
- * Created by 10033 on 2017/5/9.
+ * Created by seven on 2018/5/12.
+ *
  */
 public class StringUtil {
     private StringUtil() {

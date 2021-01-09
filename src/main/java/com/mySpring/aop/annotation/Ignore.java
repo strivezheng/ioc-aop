@@ -1,9 +1,10 @@
-package com.mySpring.aop;
+package com.mySpring.aop.annotation;
 
 import java.lang.annotation.*;
 
 /**
- * Created by 10033 on 2017/5/12.
+ * Created by seven on 2018/5/12.
+ *
  */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

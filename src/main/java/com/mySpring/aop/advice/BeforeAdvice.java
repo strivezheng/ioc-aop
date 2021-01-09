@@ -1,7 +1,8 @@
-package com.mySpring.aop;
+package com.mySpring.aop.advice;
 
 /**
- * Created by 10033 on 2017/5/12.
+ * Created by seven on 2018/5/12.
+ *
  */
 public interface BeforeAdvice extends Advice {
     void before();

@@ -7,7 +7,8 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * Created by 10033 on 2017/5/9.
+ * Created by seven on 2018/5/12.
+ *
  */
 public class PropertiesReaderUtil {
 

@@ -1,29 +1,62 @@
 package com.mySpring.aop;
 
+import com.mySpring.aop.advice.AfterAdvice;
+import com.mySpring.aop.advice.BeforeAdvice;
+import com.mySpring.aop.advice.SurroundAdvice;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * Created by 10033 on 2017/5/12.
+ * Created by seven on 2018/5/12.
  * 执行通知
  */
 public class Execute {
-    public static Object executeAfter
-            (Object o, Object[] objects, MethodProxy methodProxy, AfterAdvice advice) throws Throwable {
-        Object object=methodProxy.invokeSuper(o,objects);
+
+    /**
+     * 执行after
+     *
+     * @param o
+     * @param objects
+     * @param methodProxy
+     * @param advice
+     * @return
+     * @throws Throwable
+     */
+    public static Object executeAfter(Object o, Object[] objects, MethodProxy methodProxy, AfterAdvice advice) throws Throwable {
+        Object object = methodProxy.invokeSuper(o, objects);
         advice.after();
         return object;
     }
-    public static Object executeBefore
-            (Object o, Object[] objects, MethodProxy methodProxy, BeforeAdvice advice) throws Throwable {
+
+    /**
+     * 执行before
+     *
+     * @param o
+     * @param objects
+     * @param methodProxy
+     * @param advice
+     * @return
+     * @throws Throwable
+     */
+    public static Object executeBefore(Object o, Object[] objects, MethodProxy methodProxy, BeforeAdvice advice) throws Throwable {
         advice.before();
-        Object object=methodProxy.invokeSuper(o,objects);
+        Object object = methodProxy.invokeSuper(o, objects);
 
         return object;
     }
-    public static Object executeSurround
-            (Object o, Object[] objects, MethodProxy methodProxy, SurroundAdvice advice) throws Throwable {
+
+    /**
+     * 执行 surround
+     *
+     * @param o
+     * @param objects
+     * @param methodProxy
+     * @param advice
+     * @return
+     * @throws Throwable
+     */
+    public static Object executeSurround(Object o, Object[] objects, MethodProxy methodProxy, SurroundAdvice advice) throws Throwable {
         advice.before();
-        Object object=methodProxy.invokeSuper(o,objects);
+        Object object = methodProxy.invokeSuper(o, objects);
         advice.after();
         return object;
     }

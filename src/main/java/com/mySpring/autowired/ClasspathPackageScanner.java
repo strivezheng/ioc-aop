@@ -13,11 +13,9 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
-/**
- * Created by 10033 on 2017/5/9.
- */
 
 /**
+ * Created by seven on 2018/5/12.
  * 获取某个包下的类
  */
 public class ClasspathPackageScanner {
@@ -27,6 +25,7 @@ public class ClasspathPackageScanner {
 
     /**
      * Construct an instance and specify the base package it should scan.
+     *
      * @param basePackage The base package to scan.
      */
     public ClasspathPackageScanner(String basePackage) {
@@ -37,6 +36,7 @@ public class ClasspathPackageScanner {
 
     /**
      * Construct an instance with base package and class loader.
+     *
      * @param basePackage The base package to scan.
      * @param classLoader Use this class load to locate the package.
      */
@@ -50,8 +50,7 @@ public class ClasspathPackageScanner {
      * and its sub-package.
      *
      * @return A list of fully qualified names.
-     * @throws IOException
-     * IoC的载入
+     * @throws IOException IoC的载入
      */
     public List<String> getFullyQualifiedClassNameList() throws IOException {
 
@@ -62,9 +61,8 @@ public class ClasspathPackageScanner {
      * Actually perform the scanning procedure.
      *
      * @param basePackage
-     * @param nameList A list to contain the result.
+     * @param nameList    A list to contain the result.
      * @return A list of fully qualified names.
-     *
      * @throws IOException
      */
     private List<String> doScan(String basePackage, List<String> nameList) throws IOException {

@@ -1,23 +1,21 @@
-package com.mySpring.client;
-
-/**
- * Created by 10033 on 2017/5/9.
- */
+package com.mySpring.service;
 
 
-import com.mySpring.aop.PointCut;
+import com.mySpring.aop.annotation.PointCut;
 import com.mySpring.autowired.MyAutowired;
 import com.mySpring.autowired.MyBean;
 
+
 /**
+ * Created by seven on 2018/5/12.
  * 班级类
  */
-@MyBean("classes")
-@PointCut("com.mySpring.client.AfterTest")
-public class Classes {
+@MyBean("classesService")
+@PointCut("com.mySpring.aspect.AfterAspect")
+public class ClassesService {
 
     @MyAutowired
-    private Teacher teacher;
+    private TeacherService teacherService;
     private String classname;
 
     public String getClassname() {
@@ -29,13 +27,12 @@ public class Classes {
     }
 
     public void showClasses() {
-        teacher.setName("苍老师");
-        classname="计算机班";
+        teacherService.setName("苍老师");
+        classname = "计算机班";
         System.out.println(classname);
-        System.out.println(teacher);
     }
 
-    @PointCut("com.mySpring.client.BeforeTest")
+    @PointCut("com.mySpring.client.BeforeAspect")
     public void test() {
         System.out.println("做一下");
     }
