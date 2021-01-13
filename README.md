@@ -2,7 +2,7 @@
 
 
 # 说明
-本项目是手动实现一个类似Spring的IOC和AOP功能的demo
+看完spring源码后，感触颇深。于是经过一番研究手动实现一个类似Spring的IOC和AOP功能的demo，本demo成功实现了容器的依赖注入和切面的功能，aop使用CGLIB实现。
 
 
 ## 说明
